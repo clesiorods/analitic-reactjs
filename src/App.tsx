@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from 'react-router-dom';
+import { Router } from './Router';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <h1>Olá</h1>
-    </div>
+    <BrowserRouter>
+      <Router/>
+    </BrowserRouter>
   )
 }
 

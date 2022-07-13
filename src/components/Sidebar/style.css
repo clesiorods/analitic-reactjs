@@ -1,0 +1,12 @@
+#sidebar {
+    background-color: #313a46;
+    height: 100vh;
+    transition: .3s all;
+    transition-timing-function: ease-out;
+
+
+
+
+    width: 250px;
+    padding-top: 20px;
+}
