@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Content } from "./Content";
+import { SideBar } from "./SideBar";
 
 
 type FrameProps = {
@@ -13,6 +15,11 @@ const Div = styled.div`
 
 export function MainFrame(props: FrameProps) {
     return (
-        <Div>{props.children}</Div>
+        <Div>
+            <SideBar />
+            <Content>
+                {props.children}
+            </Content>
+        </Div>
     );
 }

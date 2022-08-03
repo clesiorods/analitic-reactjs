@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 
 const Header = styled.header`
+margin-left: -24px;
     padding: 0 24px;
     background-color: #ffffff;
     box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
@@ -10,7 +11,7 @@ const Header = styled.header`
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 20;
+    z-index: 10;
 `;
 
 export function TopBar() {
