@@ -4,9 +4,11 @@ import styled from "styled-components";
 
 const Title = styled.div`
     display: flex;
+    margin-bottom: -10px;
+    margin-top: 10px;
 
     h4 {
-        margin-bottom: -20px; 
+        margin-bottom: 00px; 
         padding-top: 20px; 
         font-weight: 700; 
         font-size: 18px;
@@ -20,6 +22,7 @@ type TitleProps = {
     classElement: string
     description: string
 }
+
 
 export function SectionTitle(props: TitleProps) {
     return (

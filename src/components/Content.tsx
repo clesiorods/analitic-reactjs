@@ -10,7 +10,7 @@ const Div = styled.div`
 
     background-color: #f8f9fd;
     padding: 24px;
-    padding-top: 90px;
+    padding-top: 80px;
     overflow-y: scroll;
     max-height: 100vh;
     width: 100%;

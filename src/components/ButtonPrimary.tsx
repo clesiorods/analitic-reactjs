@@ -6,6 +6,8 @@ const Button = styled.button`
     border: none;
     border-radius: 0.15rem;
     box-shadow: 0 2px 6px 0 rgb(114 124 245 / 50%);
+    min-width: 45px;
+    height: 38px;
 
     :hover {
         background-color: #5f69cf !important;

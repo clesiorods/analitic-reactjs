@@ -1,13 +1,13 @@
-import { mdiCalendarRange } from "@mdi/js";
-import Icon from "@mdi/react";
+
 import styled from "styled-components"
 import { ButtonPrimary } from "./ButtonPrimary";
 
 const CombInputStyled = styled.div`
     color: white;
+    height: 38px;
 
     input {
-        width: 200px !important;
+        width: 210px !important;
         background-color: #e8eaf1 !important;
         border-color: #f1f3fa !important;
         color: #6c757d !important;
@@ -19,16 +19,18 @@ const CombInputStyled = styled.div`
     }
 `;
 
-export function CombInput() {
+type CombProps = {
+    placeHolder: string;
+    children: React.ReactNode;
+}
+
+export function CombInput(props: CombProps) {
     return (
         <CombInputStyled className="input-group">
-            <input type="text" className="form-control form-control-light" id="dash-daterange" />
+            <input type="text" placeholder={props.placeHolder} className="form-control form-control-light" id="dash-daterange" />
 
             <ButtonPrimary>
-                <Icon path={mdiCalendarRange}
-                    title="User Profile"
-                    size={.55}
-                />
+                {props.children}
             </ButtonPrimary>
         </CombInputStyled >
 
