@@ -1,4 +1,4 @@
-import { mdiAutorenew, mdiCalendarRange, mdiFilter, mdiFilterVariant, mdiRefresh } from "@mdi/js";
+import { mdiAutorenew, mdiCalendarRange, mdiFilterVariant } from "@mdi/js";
 import Icon from "@mdi/react";
 import { ButtonPrimary } from "../components/ButtonPrimary";
 import { Card } from "../components/Card";

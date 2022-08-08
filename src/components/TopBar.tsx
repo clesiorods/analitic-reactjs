@@ -1,6 +1,5 @@
 import { mdiMenu } from "@mdi/js";
 import Icon from "@mdi/react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { CombInput } from "./CombInput";
 
