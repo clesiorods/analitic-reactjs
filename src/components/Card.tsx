@@ -17,7 +17,7 @@ export function Card(props: CardProps) {
         box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.20);
         transition: .3s all;
         :hover {
-            box-shadow: 0px 0px 30px 0px rgba(150, 156, 166, 0.1);
+            box-shadow: 0px 0px 30px 0px rgba(150, 156, 166, 0.35);
         }
     `;
 

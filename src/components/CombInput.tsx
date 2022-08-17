@@ -17,6 +17,13 @@ const CombInputStyled = styled.div`
     button {
         margin: 0 !important;
     }
+
+
+    @media screen and (max-width: 800px) {
+        input {
+            display: none;
+        }
+    }
 `;
 
 type CombProps = {
@@ -26,7 +33,7 @@ type CombProps = {
 
 export function CombInput(props: CombProps) {
     return (
-        <CombInputStyled className="input-group">
+        <CombInputStyled className="input-group search-group">
             <input type="text" placeholder={props.placeHolder} className="form-control form-control-light" id="dash-daterange" />
 
             <ButtonPrimary>

@@ -3,6 +3,7 @@ import Icon from "@mdi/react";
 import { ButtonPrimary } from "../components/ButtonPrimary";
 import { Card } from "../components/Card";
 import { CombInput } from "../components/CombInput";
+import { LineGraphic } from "../components/LineGraphic";
 import { MainFrame } from "../components/MainFrame";
 import { SectionTitle } from "../components/SectionTitle";
 
@@ -73,7 +74,9 @@ export function Home() {
                                 <span>
                                     PROJECTIONS VS ACTUALS
                                 </span>
-                                <div id="chart"></div>
+                                <div id="chart">
+                                <LineGraphic />
+                                </div>
                             </div>
                         </Card>
                     </div>

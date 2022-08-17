@@ -8,6 +8,8 @@ const Nav = styled.nav`
     transition-timing-function: ease-out;
     padding-top: 20px;
 
+
+
     h1 {
         font-size: 35px;
         text-align: center;
@@ -23,8 +25,27 @@ const Nav = styled.nav`
             transition: .4s all; 
             /* opacity: 0; */
             color: white;
-            opacity: 1;
         }
+    }
+
+
+    @media screen and (max-width: 1200px) {
+        width: 70px;
+        padding-top: 15px;
+
+        #title_alitic {
+            opacity: 0;
+        }
+
+        #title_an {
+            padding-left: 11px;
+        }
+    }
+
+
+    @media screen and (max-width: 800px) {
+        width: 0px;
+        display: none;
     }
 `;
 
@@ -32,8 +53,8 @@ export function SideBar() {
     return (
         <Nav>
             <h1 className="title logo">
-                <span id="title_an">An</span>
-                <span id="title_alitic">alitic</span>
+                <span id="title_an" >An</span>
+                <span id="title_alitic" >alitic</span>
             </h1>
         </Nav>
     );
