@@ -52,5 +52,5 @@
     "@types/styled-components": "^5.1.25"
   },
 
-  "homepage": "/build"
+  "homepage": "/"
 }
