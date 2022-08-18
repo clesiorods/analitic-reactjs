@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Footer } from "./Footer";
 import { TopBar } from "./TopBar";
 
 type ContentProps = {
@@ -22,6 +23,7 @@ export function Content(props: ContentProps) {
         <Div>
             <TopBar />
             {props.children}
+            <Footer />
         </Div>
     );
 }

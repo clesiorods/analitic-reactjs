@@ -30,7 +30,7 @@ import { Router } from './Router'
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/' >
       <GlobalStyle />
       <Router />
     </BrowserRouter>

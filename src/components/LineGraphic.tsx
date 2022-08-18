@@ -16,11 +16,11 @@ export function LineGraphic() {
 
 
     const series = [{
-        name: 'All Tasks',
-        data: [31, 40, 28, 51, 42, 109, 100]
+        name: 'IBOVESPA',
+        data: [31, 40, 28, 51, 42, 109, 100, 111, 113]
       }, {
-        name: 'My Tasks',
-        data: [11, 32, 45, 32, 34, 52, 41]
+        name: 'Minha Carteira',
+        data: [11, 32, 45, 32, 34, 52, 41, 50, 71]
       }];
       
     return(
