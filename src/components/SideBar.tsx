@@ -1,3 +1,6 @@
+import { mdiHomeAlert } from "@mdi/js";
+import Icon from "@mdi/react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -9,6 +12,18 @@ const Nav = styled.nav`
     padding-top: 20px;
 
 
+    ul {
+        list-style: none;
+        font-size: 18px;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #6c757d;
+
+        li {}
+    }
 
     h1 {
         font-size: 35px;
@@ -48,6 +63,18 @@ const Nav = styled.nav`
     }
     
 
+
+    .side-nav .side-nav-link {
+        color: var(--ct-menu-item);
+        display: block;
+        padding: 10px 30px;
+        font-size: .9375rem;
+        position: relative;
+        -webkit-transition: all .4s;
+        transition: all .4s;
+        list-style: none;
+    }
+
     @media screen and (max-width: 1200px) {
         width: 70px;
         padding-top: 15px;
@@ -82,24 +109,27 @@ export function SideBar() {
                 <li className="side-nav-title side-nav-item">Navigation</li>
 
                 <li className="side-nav-item menuitem-active">
-                    <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className="side-nav-link">
-                        <i className="uil-home-alt"></i>
+                    <Link data-bs-toggle="collapse" to="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className="side-nav-link">
+                        <Icon path={mdiHomeAlert}
+                                title="User Profile"
+                                size={.60}
+                            />
                         <span className="badge bg-success float-end">4</span>
                         <span> Dashboards </span>
-                    </a>
+                    </Link>
                     <div className="collapse show" id="sidebarDashboards">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="dashboard-analytics.html">Analytics</a>
+                                <Link to="dashboard-analytics.html">Analytics</Link>
                             </li>
                             <li className="menuitem-active">
-                                <a href="index.html" className="active">Ecommerce</a>
+                                <Link to="index.html" className="active">Ecommerce</Link>
                             </li>
                             <li>
-                                <a href="dashboard-projects.html">Projects</a>
+                                <Link to="dashboard-projects.html">Projects</Link>
                             </li>
                             <li>
-                                <a href="dashboard-wallet.html">E-Wallet <span className="badge rounded bg-danger font-10 float-end">New</span></a>
+                                <Link to="dashboard-wallet.html">E-Wallet <span className="badge rounded bg-danger font-10 float-end">New</span></Link>
                             </li>
                         </ul>
                     </div>
@@ -108,289 +138,289 @@ export function SideBar() {
                 <li className="side-nav-title side-nav-item">Apps</li>
 
                 <li className="side-nav-item">
-                    <a href="apps-calendar.html" className="side-nav-link">
+                    <Link to="apps-calendar.html" className="side-nav-link">
                         <i className="uil-calender"></i>
                         <span> Calendar </span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="side-nav-item">
-                    <a href="apps-chat.html" className="side-nav-link">
+                    <Link to="apps-chat.html" className="side-nav-link">
                         <i className="uil-comments-alt"></i>
                         <span> Chat </span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" className="side-nav-link">
                         <i className="uil uil-tachometer-fast"></i>
                         <span className="badge bg-danger text-white float-end">New</span>
                         <span> CRM </span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarCrm">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="crm-dashboard.html">Dashboard</a>
+                                <Link to="crm-dashboard.html">Dashboard</Link>
                             </li>
                             <li>
-                                <a href="crm-projects.html">Project</a>
+                                <Link to="crm-projects.html">Project</Link>
                             </li>
                             <li>
-                                <a href="crm-orders-list.html">Orders List</a>
+                                <Link to="crm-orders-list.html">Orders List</Link>
                             </li>
                             <li>
-                                <a href="crm-clients.html">Clients</a>
+                                <Link to="crm-clients.html">Clients</Link>
                             </li>
                             <li>
-                                <a href="crm-management.html">Management</a>
+                                <Link to="crm-management.html">Management</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" className="side-nav-link">
                         <i className="uil-store"></i>
                         <span> Ecommerce </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarEcommerce">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="apps-ecommerce-products.html">Products</a>
+                                <Link to="apps-ecommerce-products.html">Products</Link>
                             </li>
                             <li>
-                                <a href="apps-ecommerce-products-details.html">Products Details</a>
+                                <Link to="apps-ecommerce-products-details.html">Products Details</Link>
                             </li>
                             <li>
-                                <a href="apps-ecommerce-orders.html">Orders</a>
+                                <Link to="apps-ecommerce-orders.html">Orders</Link>
                             </li>
                             <li>
-                                <a href="apps-ecommerce-orders-details.html">Order Details</a>
+                                <Link to="apps-ecommerce-orders-details.html">Order Details</Link>
                             </li>
                             <li>
-                                <a href="apps-ecommerce-customers.html">Customers</a>
+                                <Link to="apps-ecommerce-customers.html">Customers</Link>
                             </li>
                             <li>
-                                <a href="apps-ecommerce-shopping-cart.html">Shopping Cart</a>
+                                <Link to="apps-ecommerce-shopping-cart.html">Shopping Cart</Link>
                             </li>
                             <li>
-                                <a href="apps-ecommerce-checkout.html">Checkout</a>
+                                <Link to="apps-ecommerce-checkout.html">Checkout</Link>
                             </li>
                             <li>
-                                <a href="apps-ecommerce-sellers.html">Sellers</a>
+                                <Link to="apps-ecommerce-sellers.html">Sellers</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" className="side-nav-link">
                         <i className="uil-envelope"></i>
                         <span> Email </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarEmail">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="apps-email-inbox.html">Inbox</a>
+                                <Link to="apps-email-inbox.html">Inbox</Link>
                             </li>
                             <li>
-                                <a href="apps-email-read.html">Read Email</a>
+                                <Link to="apps-email-read.html">Read Email</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarProjects" aria-expanded="false" aria-controls="sidebarProjects" className="side-nav-link">
                         <i className="uil-briefcase"></i>
                         <span> Projects </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarProjects">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="apps-projects-list.html">List</a>
+                                <Link to="apps-projects-list.html">List</Link>
                             </li>
                             <li>
-                                <a href="apps-projects-details.html">Details</a>
+                                <Link to="apps-projects-details.html">Details</Link>
                             </li>
                             <li>
-                                <a href="apps-projects-gantt.html">Gantt <span className="badge rounded-pill bg-light text-dark font-10 float-end">New</span></a>
+                                <Link to="apps-projects-gantt.html">Gantt <span className="badge rounded-pill bg-light text-dark font-10 float-end">New</span></Link>
                             </li>
                             <li>
-                                <a href="apps-projects-add.html">Create Project</a>
+                                <Link to="apps-projects-add.html">Create Project</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a href="apps-social-feed.html" className="side-nav-link">
+                    <Link to="apps-social-feed.html" className="side-nav-link">
                         <i className="uil-rss"></i>
                         <span> Social Feed </span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarTasks" aria-expanded="false" aria-controls="sidebarTasks" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarTasks" aria-expanded="false" aria-controls="sidebarTasks" className="side-nav-link">
                         <i className="uil-clipboard-alt"></i>
                         <span> Tasks </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarTasks">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="apps-tasks.html">List</a>
+                                <Link to="apps-tasks.html">List</Link>
                             </li>
                             <li>
-                                <a href="apps-tasks-details.html">Details</a>
+                                <Link to="apps-tasks-details.html">Details</Link>
                             </li>
                             <li>
-                                <a href="apps-kanban.html">Kanban Board</a>
+                                <Link to="apps-kanban.html">Kanban Board</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a href="apps-file-manager.html" className="side-nav-link">
+                    <Link to="apps-file-manager.html" className="side-nav-link">
                         <i className="uil-folder-plus"></i>
                         <span> File Manager </span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="side-nav-title side-nav-item">Custom</li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" className="side-nav-link">
                         <i className="uil-copy-alt"></i>
                         <span> Pages </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarPages">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="pages-profile.html">Profile</a>
+                                <Link to="pages-profile.html">Profile</Link>
                             </li>
                             <li>
-                                <a href="pages-profile-2.html">Profile 2</a>
+                                <Link to="pages-profile-2.html">Profile 2</Link>
                             </li>
                             <li>
-                                <a href="pages-invoice.html">Invoice</a>
+                                <Link to="pages-invoice.html">Invoice</Link>
                             </li>
                             <li>
-                                <a href="pages-faq.html">FAQ</a>
+                                <Link to="pages-faq.html">FAQ</Link>
                             </li>
                             <li>
-                                <a href="pages-pricing.html">Pricing</a>
+                                <Link to="pages-pricing.html">Pricing</Link>
                             </li>
                             <li>
-                                <a href="pages-maintenance.html">Maintenance</a>
+                                <Link to="pages-maintenance.html">Maintenance</Link>
                             </li>
                             <li className="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth">
+                                <Link data-bs-toggle="collapse" to="#sidebarPagesAuth" aria-expanded="false" aria-controls="sidebarPagesAuth">
                                     <span> Authentication </span>
                                     <span className="menu-arrow"></span>
-                                </a>
+                                </Link>
                                 <div className="collapse" id="sidebarPagesAuth">
                                     <ul className="side-nav-third-level">
                                         <li>
-                                            <a href="pages-login.html">Login</a>
+                                            <Link to="pages-login.html">Login</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-login-2.html">Login 2</a>
+                                            <Link to="pages-login-2.html">Login 2</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-register.html">Register</a>
+                                            <Link to="pages-register.html">Register</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-register-2.html">Register 2</a>
+                                            <Link to="pages-register-2.html">Register 2</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-logout.html">Logout</a>
+                                            <Link to="pages-logout.html">Logout</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-logout-2.html">Logout 2</a>
+                                            <Link to="pages-logout-2.html">Logout 2</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-recoverpw.html">Recover Password</a>
+                                            <Link to="pages-recoverpw.html">Recover Password</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-recoverpw-2.html">Recover Password 2</a>
+                                            <Link to="pages-recoverpw-2.html">Recover Password 2</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-lock-screen.html">Lock Screen</a>
+                                            <Link to="pages-lock-screen.html">Lock Screen</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-lock-screen-2.html">Lock Screen 2</a>
+                                            <Link to="pages-lock-screen-2.html">Lock Screen 2</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-confirm-mail.html">Confirm Mail</a>
+                                            <Link to="pages-confirm-mail.html">Confirm Mail</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-confirm-mail-2.html">Confirm Mail 2</a>
+                                            <Link to="pages-confirm-mail-2.html">Confirm Mail 2</Link>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li className="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarPagesError" aria-expanded="false" aria-controls="sidebarPagesError">
+                                <Link data-bs-toggle="collapse" to="#sidebarPagesError" aria-expanded="false" aria-controls="sidebarPagesError">
                                     <span> Error </span>
                                     <span className="menu-arrow"></span>
-                                </a>
+                                </Link>
                                 <div className="collapse" id="sidebarPagesError">
                                     <ul className="side-nav-third-level">
                                         <li>
-                                            <a href="pages-404.html">Error 404</a>
+                                            <Link to="pages-404.html">Error 404</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-404-alt.html">Error 404-alt</a>
+                                            <Link to="pages-404-alt.html">Error 404-alt</Link>
                                         </li>
                                         <li>
-                                            <a href="pages-500.html">Error 500</a>
+                                            <Link to="pages-500.html">Error 500</Link>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a href="pages-starter.html">Starter Page</a>
+                                <Link to="pages-starter.html">Starter Page</Link>
                             </li>
                             <li>
-                                <a href="pages-preloader.html">With Preloader</a>
+                                <Link to="pages-preloader.html">With Preloader</Link>
                             </li>
                             <li>
-                                <a href="pages-timeline.html">Timeline</a>
+                                <Link to="pages-timeline.html">Timeline</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a href="landing.html" target="_blank" className="side-nav-link">
+                    <Link to="landing.html" target="_blank" className="side-nav-link">
                         <i className="uil-globe"></i>
                         <span className="badge bg-secondary text-light float-end">New</span>
                         <span> Landing </span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarLayouts" aria-expanded="false" aria-controls="sidebarLayouts" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarLayouts" aria-expanded="false" aria-controls="sidebarLayouts" className="side-nav-link">
                         <i className="uil-window"></i>
                         <span> Layouts </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarLayouts">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="layouts-horizontal.html">Horizontal</a>
+                                <Link to="layouts-horizontal.html">Horizontal</Link>
                             </li>
                             <li>
-                                <a href="layouts-detached.html">Detached</a>
+                                <Link to="layouts-detached.html">Detached</Link>
                             </li>
                             <li>
-                                <a href="layouts-full.html">Full</a>
+                                <Link to="layouts-full.html">Full</Link>
                             </li>
                         </ul>
                     </div>
@@ -399,329 +429,329 @@ export function SideBar() {
                 <li className="side-nav-title side-nav-item mt-1">Components</li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarBaseUI" aria-expanded="false" aria-controls="sidebarBaseUI" className="side-nav-link">
                         <i className="uil-box"></i>
                         <span> Base UI </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarBaseUI">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="ui-accordions.html">Accordions</a>
+                                <Link to="ui-accordions.html">Accordions</Link>
                             </li>
                             <li>
-                                <a href="ui-alerts.html">Alerts</a>
+                                <Link to="ui-alerts.html">Alerts</Link>
                             </li>
                             <li>
-                                <a href="ui-avatars.html">Avatars</a>
+                                <Link to="ui-avatars.html">Avatars</Link>
                             </li>
                             <li>
-                                <a href="ui-badges.html">Badges</a>
+                                <Link to="ui-badges.html">Badges</Link>
                             </li>
                             <li>
-                                <a href="ui-breadcrumb.html">Breadcrumb</a>
+                                <Link to="ui-breadcrumb.html">Breadcrumb</Link>
                             </li>
                             <li>
-                                <a href="ui-buttons.html">Buttons</a>
+                                <Link to="ui-buttons.html">Buttons</Link>
                             </li>
                             <li>
-                                <a href="ui-cards.html">Cards</a>
+                                <Link to="ui-cards.html">Cards</Link>
                             </li>
                             <li>
-                                <a href="ui-carousel.html">Carousel</a>
+                                <Link to="ui-carousel.html">Carousel</Link>
                             </li>
                             <li>
-                                <a href="ui-dropdowns.html">Dropdowns</a>
+                                <Link to="ui-dropdowns.html">Dropdowns</Link>
                             </li>
                             <li>
-                                <a href="ui-embed-video.html">Embed Video</a>
+                                <Link to="ui-embed-video.html">Embed Video</Link>
                             </li>
                             <li>
-                                <a href="ui-grid.html">Grid</a>
+                                <Link to="ui-grid.html">Grid</Link>
                             </li>
                             <li>
-                                <a href="ui-list-group.html">List Group</a>
+                                <Link to="ui-list-group.html">List Group</Link>
                             </li>
                             <li>
-                                <a href="ui-modals.html">Modals</a>
+                                <Link to="ui-modals.html">Modals</Link>
                             </li>
                             <li>
-                                <a href="ui-notifications.html">Notifications</a>
+                                <Link to="ui-notifications.html">Notifications</Link>
                             </li>
                             <li>
-                                <a href="ui-offcanvas.html">Offcanvas</a>
+                                <Link to="ui-offcanvas.html">Offcanvas</Link>
                             </li>
                             <li>
-                                <a href="ui-placeholders.html">Placeholders</a>
+                                <Link to="ui-placeholders.html">Placeholders</Link>
                             </li>
                             <li>
-                                <a href="ui-pagination.html">Pagination</a>
+                                <Link to="ui-pagination.html">Pagination</Link>
                             </li>
                             <li>
-                                <a href="ui-popovers.html">Popovers</a>
+                                <Link to="ui-popovers.html">Popovers</Link>
                             </li>
                             <li>
-                                <a href="ui-progress.html">Progress</a>
+                                <Link to="ui-progress.html">Progress</Link>
                             </li>
                             <li>
-                                <a href="ui-ribbons.html">Ribbons</a>
+                                <Link to="ui-ribbons.html">Ribbons</Link>
                             </li>
                             <li>
-                                <a href="ui-spinners.html">Spinners</a>
+                                <Link to="ui-spinners.html">Spinners</Link>
                             </li>
                             <li>
-                                <a href="ui-tabs.html">Tabs</a>
+                                <Link to="ui-tabs.html">Tabs</Link>
                             </li>
                             <li>
-                                <a href="ui-tooltips.html">Tooltips</a>
+                                <Link to="ui-tooltips.html">Tooltips</Link>
                             </li>
                             <li>
-                                <a href="ui-typography.html">Typography</a>
+                                <Link to="ui-typography.html">Typography</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false" aria-controls="sidebarExtendedUI" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarExtendedUI" aria-expanded="false" aria-controls="sidebarExtendedUI" className="side-nav-link">
                         <i className="uil-package"></i>
                         <span> Extended UI </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarExtendedUI">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="extended-dragula.html">Dragula</a>
+                                <Link to="extended-dragula.html">Dragula</Link>
                             </li>
                             <li>
-                                <a href="extended-range-slider.html">Range Slider</a>
+                                <Link to="extended-range-slider.html">Range Slider</Link>
                             </li>
                             <li>
-                                <a href="extended-ratings.html">Ratings</a>
+                                <Link to="extended-ratings.html">Ratings</Link>
                             </li>
                             <li>
-                                <a href="extended-scrollbar.html">Scrollbar</a>
+                                <Link to="extended-scrollbar.html">Scrollbar</Link>
                             </li>
                             <li>
-                                <a href="extended-scrollspy.html">Scrollspy</a>
+                                <Link to="extended-scrollspy.html">Scrollspy</Link>
                             </li>
                             <li>
-                                <a href="extended-treeview.html">Treeview</a>
+                                <Link to="extended-treeview.html">Treeview</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a href="widgets.html" className="side-nav-link">
+                    <Link to="widgets.html" className="side-nav-link">
                         <i className="uil-layer-group"></i>
                         <span> Widgets </span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarIcons" aria-expanded="false" aria-controls="sidebarIcons" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarIcons" aria-expanded="false" aria-controls="sidebarIcons" className="side-nav-link">
                         <i className="uil-streering"></i>
                         <span> Icons </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarIcons">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="icons-dripicons.html">Dripicons</a>
+                                <Link to="icons-dripicons.html">Dripicons</Link>
                             </li>
                             <li>
-                                <a href="icons-mdi.html">Material Design</a>
+                                <Link to="icons-mdi.html">Material Design</Link>
                             </li>
                             <li>
-                                <a href="icons-unicons.html">Unicons</a>
+                                <Link to="icons-unicons.html">Unicons</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarForms" aria-expanded="false" aria-controls="sidebarForms" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarForms" aria-expanded="false" aria-controls="sidebarForms" className="side-nav-link">
                         <i className="uil-document-layout-center"></i>
                         <span> Forms </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarForms">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="form-elements.html">Basic Elements</a>
+                                <Link to="form-elements.html">Basic Elements</Link>
                             </li>
                             <li>
-                                <a href="form-advanced.html">Form Advanced</a>
+                                <Link to="form-advanced.html">Form Advanced</Link>
                             </li>
                             <li>
-                                <a href="form-validation.html">Validation</a>
+                                <Link to="form-validation.html">Validation</Link>
                             </li>
                             <li>
-                                <a href="form-wizard.html">Wizard</a>
+                                <Link to="form-wizard.html">Wizard</Link>
                             </li>
                             <li>
-                                <a href="form-fileuploads.html">File Uploads</a>
+                                <Link to="form-fileuploads.html">File Uploads</Link>
                             </li>
                             <li>
-                                <a href="form-editors.html">Editors</a>
+                                <Link to="form-editors.html">Editors</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" className="side-nav-link">
                         <i className="uil-chart"></i>
                         <span> Charts </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarCharts">
                         <ul className="side-nav-second-level">
                             <li className="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarApexCharts" aria-expanded="false" aria-controls="sidebarApexCharts">
+                                <Link data-bs-toggle="collapse" to="#sidebarApexCharts" aria-expanded="false" aria-controls="sidebarApexCharts">
                                     <span> Apex Charts </span>
                                     <span className="menu-arrow"></span>
-                                </a>
+                                </Link>
                                 <div className="collapse" id="sidebarApexCharts">
                                     <ul className="side-nav-third-level">
                                         <li>
-                                            <a href="charts-apex-area.html">Area</a>
+                                            <Link to="charts-apex-area.html">Area</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-bar.html">Bar</a>
+                                            <Link to="charts-apex-bar.html">Bar</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-bubble.html">Bubble</a>
+                                            <Link to="charts-apex-bubble.html">Bubble</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-candlestick.html">Candlestick</a>
+                                            <Link to="charts-apex-candlestick.html">Candlestick</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-column.html">Column</a>
+                                            <Link to="charts-apex-column.html">Column</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-heatmap.html">Heatmap</a>
+                                            <Link to="charts-apex-heatmap.html">Heatmap</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-line.html">Line</a>
+                                            <Link to="charts-apex-line.html">Line</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-mixed.html">Mixed</a>
+                                            <Link to="charts-apex-mixed.html">Mixed</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-pie.html">Pie</a>
+                                            <Link to="charts-apex-pie.html">Pie</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-radar.html">Radar</a>
+                                            <Link to="charts-apex-radar.html">Radar</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-radialbar.html">RadialBar</a>
+                                            <Link to="charts-apex-radialbar.html">RadialBar</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-scatter.html">Scatter</a>
+                                            <Link to="charts-apex-scatter.html">Scatter</Link>
                                         </li>
                                         <li>
-                                            <a href="charts-apex-sparklines.html">Sparklines</a>
+                                            <Link to="charts-apex-sparklines.html">Sparklines</Link>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a href="charts-brite.html">Britecharts</a>
+                                <Link to="charts-brite.html">Britecharts</Link>
                             </li>
                             <li>
-                                <a href="charts-chartjs.html">Chartjs</a>
+                                <Link to="charts-chartjs.html">Chartjs</Link>
                             </li>
                             <li>
-                                <a href="charts-sparkline.html">Sparklines</a>
+                                <Link to="charts-sparkline.html">Sparklines</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" className="side-nav-link">
                         <i className="uil-table"></i>
                         <span> Tables </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarTables">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="tables-basic.html">Basic Tables</a>
+                                <Link to="tables-basic.html">Basic Tables</Link>
                             </li>
                             <li>
-                                <a href="tables-datatable.html">Data Tables</a>
+                                <Link to="tables-datatable.html">Data Tables</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" className="side-nav-link">
                         <i className="uil-location-point"></i>
                         <span> Maps </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarMaps">
                         <ul className="side-nav-second-level">
                             <li>
-                                <a href="maps-google.html">Google Maps</a>
+                                <Link to="maps-google.html">Google Maps</Link>
                             </li>
                             <li>
-                                <a href="maps-vector.html">Vector Maps</a>
+                                <Link to="maps-vector.html">Vector Maps</Link>
                             </li>
                         </ul>
                     </div>
                 </li>
 
                 <li className="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" className="side-nav-link">
+                    <Link data-bs-toggle="collapse" to="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" className="side-nav-link">
                         <i className="uil-folder-plus"></i>
                         <span> Multi Level </span>
                         <span className="menu-arrow"></span>
-                    </a>
+                    </Link>
                     <div className="collapse" id="sidebarMultiLevel">
                         <ul className="side-nav-second-level">
                             <li className="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false" aria-controls="sidebarSecondLevel">
+                                <Link data-bs-toggle="collapse" to="#sidebarSecondLevel" aria-expanded="false" aria-controls="sidebarSecondLevel">
                                     <span> Second Level </span>
                                     <span className="menu-arrow"></span>
-                                </a>
+                                </Link>
                                 <div className="collapse" id="sidebarSecondLevel">
                                     <ul className="side-nav-third-level">
                                         <li>
-                                            <a href="javascript: void(0);">Item 1</a>
+                                            <Link to="javascript: void(0);">Item 1</Link>
                                         </li>
                                         <li>
-                                            <a href="javascript: void(0);">Item 2</a>
+                                            <Link to="javascript: void(0);">Item 2</Link>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li className="side-nav-item">
-                                <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false" aria-controls="sidebarThirdLevel">
+                                <Link data-bs-toggle="collapse" to="#sidebarThirdLevel" aria-expanded="false" aria-controls="sidebarThirdLevel">
                                     <span> Third Level </span>
                                     <span className="menu-arrow"></span>
-                                </a>
+                                </Link>
                                 <div className="collapse" id="sidebarThirdLevel">
                                     <ul className="side-nav-third-level">
                                         <li>
-                                            <a href="javascript: void(0);">Item 1</a>
+                                            <Link to="javascript: void(0);">Item 1</Link>
                                         </li>
                                         <li className="side-nav-item">
-                                            <a data-bs-toggle="collapse" href="#sidebarFourthLevel" aria-expanded="false" aria-controls="sidebarFourthLevel">
+                                            <Link data-bs-toggle="collapse" to="#sidebarFourthLevel" aria-expanded="false" aria-controls="sidebarFourthLevel">
                                                 <span> Item 2 </span>
                                                 <span className="menu-arrow"></span>
-                                            </a>
+                                            </Link>
                                             <div className="collapse" id="sidebarFourthLevel">
                                                 <ul className="side-nav-forth-level">
                                                     <li>
-                                                        <a href="javascript: void(0);">Item 2.1</a>
+                                                        <Link to="javascript: void(0);">Item 2.1</Link>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript: void(0);">Item 2.2</a>
+                                                        <Link to="javascript: void(0);">Item 2.2</Link>
                                                     </li>
                                                 </ul>
                                             </div>
