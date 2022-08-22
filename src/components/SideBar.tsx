@@ -1,5 +1,5 @@
-import { mdiHomeAlert } from "@mdi/js";
-import Icon from "@mdi/react";
+import { Icon as NavIcon } from '@iconify/react';
+
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -9,7 +9,7 @@ const Nav = styled.nav`
     width: 250px;
     transition: .3s all;
     transition-timing-function: ease-out;
-    padding-top: 20px;
+    padding: 20px;
 
 
     ul {
@@ -44,6 +44,11 @@ const Nav = styled.nav`
     }
 
 
+    .active {
+        color: white;
+    }
+
+
     .side-nav {
         padding-left: 0;
         list-style-type: none;
@@ -67,7 +72,7 @@ const Nav = styled.nav`
     .side-nav .side-nav-link {
         color: var(--ct-menu-item);
         display: block;
-        padding: 10px 30px;
+        padding: 10px 0px;
         font-size: .9375rem;
         position: relative;
         -webkit-transition: all .4s;
@@ -108,22 +113,19 @@ export function SideBar() {
 
                 <li className="side-nav-title side-nav-item">Navigation</li>
 
-                <li className="side-nav-item menuitem-active">
-                    <Link data-bs-toggle="collapse" to="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className="side-nav-link">
-                        <Icon path={mdiHomeAlert}
-                                title="User Profile"
-                                size={.60}
-                            />
+                <li className="side-nav-item">
+                    <Link data-bs-toggle="collapse" to="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className="side-nav-link ">
+                        <NavIcon className="active" icon="uil:home-alt" />
                         <span className="badge bg-success float-end">4</span>
-                        <span> Dashboards </span>
+                        <span className="active"> Dashboards </span>
                     </Link>
                     <div className="collapse show" id="sidebarDashboards">
                         <ul className="side-nav-second-level">
                             <li>
                                 <Link to="dashboard-analytics.html">Analytics</Link>
                             </li>
-                            <li className="menuitem-active">
-                                <Link to="index.html" className="active">Ecommerce</Link>
+                            <li className="">
+                                <Link to="index.html" className="">Ecommerce</Link>
                             </li>
                             <li>
                                 <Link to="dashboard-projects.html">Projects</Link>
@@ -722,10 +724,10 @@ export function SideBar() {
                                 <div className="collapse" id="sidebarSecondLevel">
                                     <ul className="side-nav-third-level">
                                         <li>
-                                            <Link to="javascript: void(0);">Item 1</Link>
+                                            <Link to="">Item 1</Link>
                                         </li>
                                         <li>
-                                            <Link to="javascript: void(0);">Item 2</Link>
+                                            <Link to="">Item 2</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -738,7 +740,7 @@ export function SideBar() {
                                 <div className="collapse" id="sidebarThirdLevel">
                                     <ul className="side-nav-third-level">
                                         <li>
-                                            <Link to="javascript: void(0);">Item 1</Link>
+                                            <Link to="">Item 1</Link>
                                         </li>
                                         <li className="side-nav-item">
                                             <Link data-bs-toggle="collapse" to="#sidebarFourthLevel" aria-expanded="false" aria-controls="sidebarFourthLevel">
@@ -748,10 +750,10 @@ export function SideBar() {
                                             <div className="collapse" id="sidebarFourthLevel">
                                                 <ul className="side-nav-forth-level">
                                                     <li>
-                                                        <Link to="javascript: void(0);">Item 2.1</Link>
+                                                        <Link to="">Item 2.1</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="javascript: void(0);">Item 2.2</Link>
+                                                        <Link to="">Item 2.2</Link>
                                                     </li>
                                                 </ul>
                                             </div>
