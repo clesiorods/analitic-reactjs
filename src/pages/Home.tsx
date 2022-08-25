@@ -3,7 +3,7 @@ import Icon from "@mdi/react";
 import { ButtonPrimary } from "../components/ButtonPrimary";
 import { Card } from "../components/Card";
 import { CombInput } from "../components/CombInput";
-import { LineGraphic } from "../components/LineGraphic";
+import { LineGraphic } from "../components/AreaGraphic";
 import { MainFrame } from "../components/MainFrame";
 import { SectionTitle } from "../components/SectionTitle";
 
@@ -71,11 +71,9 @@ export function Home() {
                     <div className="col">
                         <Card height={2}>
                             <div className="card-body">
-                                <span>
-                                    PROJECTIONS VS ACTUALS
-                                </span>
-                                <div id="chart">
-                                <LineGraphic />
+                                PROJECTIONS VS ACTUALS
+                                <div className="div_chart">
+                                    <LineGraphic />
                                 </div>
                             </div>
                         </Card>
@@ -103,7 +101,12 @@ export function Home() {
                 <div className="col-md-8">
                     <Card height={2}>
                         <div className="card-body">
-                            <div id="chart_tipo_rendimento"></div>
+                            <div className="card-body">
+                                PROJECTIONS VS ACTUALS
+                                <div className="div_chart">
+                                    <LineGraphic />
+                                </div>
+                            </div>
                         </div>
                     </Card>
                 </div>

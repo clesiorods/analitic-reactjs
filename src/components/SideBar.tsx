@@ -94,7 +94,7 @@ const Nav = styled.nav`
 
         .icon {
             margin: 5px 0px !important;
-            font-size: 24px !important;
+            font-size: 18px !important;
         }
 
 
@@ -125,9 +125,16 @@ export function SideBar() {
                 <ul className="">
 
                     <li className="">
-                        <Link data-bs-toggle="" to="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
+                        <Link data-bs-toggle="" to="/" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
                             <NavIcon style={{ fontSize: '18px' }} className="active icon" icon="uil:home-alt" />
-                            <span className="active nav_text"> Dashboards </span>
+                            <span className="active nav_text"> Resumo </span>
+                        </Link>
+                    </li>
+
+                    <li className="">
+                        <Link data-bs-toggle="" to="/ativos" aria-expanded="true" aria-controls="sidebarDashboards" className="">
+                            <NavIcon style={{ fontSize: '18px' }} className="icon" icon="uil:graph-bar" />
+                            <span className=" nav_text"> Ativos </span>
                         </Link>
                     </li>
 
