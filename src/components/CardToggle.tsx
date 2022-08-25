@@ -6,7 +6,7 @@ type CardProps = {
 }
 
 
-export function Card(props: CardProps) {
+export function CardToggle(props: CardProps) {
 
 
     const CardStyled = styled.div`
@@ -14,9 +14,11 @@ export function Card(props: CardProps) {
         height: ${(180 * props.height) + ((props.height -1) * 24)}px;
         border: none;
         background-color: #ffffff;
-        box-shadow: -5px 5px 35px 0px rgba(154, 161, 171, 0.15);
+        box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.20);
         transition: .3s all;
-
+        :hover {
+            box-shadow: 0px 0px 30px 0px rgba(150, 156, 166, 0.35);
+        }
 
         .card-body {
             height: 100%;
