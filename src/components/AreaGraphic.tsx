@@ -50,7 +50,7 @@ export function LineGraphic() {
       curve: 'smooth',
       lineCap: 'butt',
       colors: undefined,
-      width: 3.5,
+      width: 3,
       dashArray: 0,
     },
   };

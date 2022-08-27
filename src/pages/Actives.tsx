@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Card } from "../components/Card";
+import { DonutGraphic } from "../components/DonutGraphic";
 import { MainFrame } from "../components/MainFrame";
 import { SectionTitle } from "../components/SectionTitle";
 
@@ -11,6 +12,21 @@ const Table = styled.table`
             td {
                 a {
                     text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: none solid;
+                    color:#6c757d!important;
+                    white-space: nowrap;
+                    word-spacing: 0px;
+                }
+
+                h5 {
+                    text-decoration: none;
+                    font-size: 14px;
+                    line-height: none solid;
+                    color:#6c757d!important;
+                    white-space: nowrap;
+                    word-spacing: 0px;
                 }
             }
 
@@ -18,6 +34,7 @@ const Table = styled.table`
                 width: 90px;
             }
         }
+        
     }
 `;
 
@@ -29,15 +46,21 @@ export function Actives() {
                 </div>
             </SectionTitle>
             <div className="row">
-                <div className="col-md-4">
-                    <Card height={2} >
+                <div className="col-md-12">
+                    <Card height={1} >
                         <div className="card-body">
-                            Distribuição
+                            <div className="card-body">
+                                <div className="div_chart">
+                                    <DonutGraphic />
+                                </div>
+                            </div>
                         </div>
                     </Card>
                 </div>
-                <div className="col-md-8">
-                    <Card height={2} >
+            </div>
+            <div className="row">
+            <div className="col-md-12">
+                    <Card height={1} >
                         <div className="card-body">
                             <h4>
                                 Ativos

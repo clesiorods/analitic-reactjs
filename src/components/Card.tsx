@@ -11,7 +11,7 @@ export function Card(props: CardProps) {
 
     const CardStyled = styled.div`
         margin-top: 24px;
-        height: ${(180 * props.height) + ((props.height -1) * 24)}px;
+        min-height: ${(180 * props.height) + ((props.height -1) * 24)}px;
         border: none;
         background-color: #ffffff;
         box-shadow: -5px 5px 35px 0px rgba(154, 161, 171, 0.15);
