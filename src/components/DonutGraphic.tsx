@@ -9,10 +9,10 @@ export function DonutGraphic() {
       // type: 'donut',
     },
     labels: [
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Ações & BDRs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>', 
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Fundos Imobiliários &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>', 
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Renda Fixa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>', 
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Team D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
+      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Ações & BDRs </span>', 
+      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Fundos Imobiliários </span>', 
+      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Renda Fixa </span>', 
+      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Fundos de Investimento </span>'
     ],
     responsive: [{
       breakpoint: 480,
@@ -30,7 +30,7 @@ export function DonutGraphic() {
       enabled: true,
     },
     legend: {
-      show: true,
+      show: false,
       showForSingleSeries: false,
       showForNullSeries: true,
       showForZeroSeries: true,

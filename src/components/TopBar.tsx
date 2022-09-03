@@ -9,7 +9,7 @@ const NavBar = styled.nav`
     padding: 0px 24px 0 24px;
     background-color: #ffffff;
     box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
-    min-height: 70px;
+    height: 65px;
     position: fixed;
     top: 0;
     width: 100% !important;

@@ -9,7 +9,8 @@ const Title = styled.div`
 
     h4 {
         margin-bottom: 00px; 
-        padding-top: 20px; 
+        padding-top: 10px; 
+        padding-bottom: 8px; 
         font-weight: 700; 
         font-size: 18px;
         white-space: nowrap;
@@ -27,7 +28,7 @@ type TitleProps = {
 export function SectionTitle(props: TitleProps) {
     return (
         <Title className={`${props.classElement}`}>
-            <div>
+            <div className="label">
                 <h4>{props.description}</h4>
             </div>
             {props.children}

@@ -1,7 +1,10 @@
 
+import { mdiMagnify } from "@mdi/js";
+import Icon from "@mdi/react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Card } from "../components/Card";
+import { CombInput } from "../components/CombInput";
 import { DonutGraphic } from "../components/DonutGraphic";
 import { MainFrame } from "../components/MainFrame";
 import { SectionTitle } from "../components/SectionTitle";
@@ -43,15 +46,26 @@ export function Actives() {
         <MainFrame>
             <SectionTitle description="Meus Ativos" classElement="justify-content-between">
                 <div className="d-flex">
+                    <CombInput placeHolder="buscar por ativos...">
+                        <Icon path={mdiMagnify}
+                            title="User Profile"
+                            size={.60}
+                        />
+                    </CombInput>
                 </div>
             </SectionTitle>
             <div className="row">
                 <div className="col-md-12">
                     <Card height={1} >
                         <div className="card-body">
-                            <div className="card-body">
-                                <div className="div_chart">
-                                    <DonutGraphic />
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <div className="div_chart">
+                                        <DonutGraphic />
+                                    </div>
+                                </div>
+                                <div className="col-md-8">
+
                                 </div>
                             </div>
                         </div>
@@ -59,7 +73,7 @@ export function Actives() {
                 </div>
             </div>
             <div className="row">
-            <div className="col-md-12">
+                <div className="col-md-12">
                     <Card height={1} >
                         <div className="card-body">
                             <h4>
@@ -69,6 +83,94 @@ export function Actives() {
                             <div className="table-responsive">
                                 <Table className="table table-centered table-nowrap table-hover mb-0">
                                     <tbody>
+                                        <tr>
+                                            <td>
+                                                <h5 className="font-14 my-1"><Link to={'#'} className="text-body">Coffee detail page - Main Page</Link></h5>
+                                                <span className="text-muted font-13">Due in 3 days</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Status</span>
+                                                <span className="badge badge-warning-lighten">In-progress</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Assigned to</span>
+                                                <h5 className="font-14 mt-1 fw-normal">Logan R. Cohn</h5>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Total time spend</span>
+                                                <h5 className="font-14 mt-1 fw-normal">3h 20min</h5>
+                                            </td>
+                                            <td className="table-action td_w">
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-pencil"></i></Link>
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 className="font-14 my-1"><Link to={'#'} className="text-body">Coffee detail page - Main Page</Link></h5>
+                                                <span className="text-muted font-13">Due in 3 days</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Status</span>
+                                                <span className="badge badge-warning-lighten">In-progress</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Assigned to</span>
+                                                <h5 className="font-14 mt-1 fw-normal">Logan R. Cohn</h5>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Total time spend</span>
+                                                <h5 className="font-14 mt-1 fw-normal">3h 20min</h5>
+                                            </td>
+                                            <td className="table-action td_w">
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-pencil"></i></Link>
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 className="font-14 my-1"><Link to={'#'} className="text-body">Coffee detail page - Main Page</Link></h5>
+                                                <span className="text-muted font-13">Due in 3 days</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Status</span>
+                                                <span className="badge badge-warning-lighten">In-progress</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Assigned to</span>
+                                                <h5 className="font-14 mt-1 fw-normal">Logan R. Cohn</h5>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Total time spend</span>
+                                                <h5 className="font-14 mt-1 fw-normal">3h 20min</h5>
+                                            </td>
+                                            <td className="table-action td_w">
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-pencil"></i></Link>
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5 className="font-14 my-1"><Link to={'#'} className="text-body">Coffee detail page - Main Page</Link></h5>
+                                                <span className="text-muted font-13">Due in 3 days</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Status</span>
+                                                <span className="badge badge-warning-lighten">In-progress</span>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Assigned to</span>
+                                                <h5 className="font-14 mt-1 fw-normal">Logan R. Cohn</h5>
+                                            </td>
+                                            <td>
+                                                <span className="text-muted font-13">Total time spend</span>
+                                                <h5 className="font-14 mt-1 fw-normal">3h 20min</h5>
+                                            </td>
+                                            <td className="table-action td_w">
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-pencil"></i></Link>
+                                                <Link to={'#'} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <h5 className="font-14 my-1"><Link to={'#'} className="text-body">Coffee detail page - Main Page</Link></h5>

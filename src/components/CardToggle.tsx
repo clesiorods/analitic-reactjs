@@ -13,6 +13,7 @@ export function CardToggle(props: CardProps) {
         margin-top: 24px;
         height: ${(180 * props.height) + ((props.height -1) * 24)}px;
         border: none;
+        border-radius: 5px;
         background-color: #ffffff;
         box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.20);
         transition: .3s all;

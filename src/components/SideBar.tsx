@@ -6,10 +6,10 @@ import styled from "styled-components";
 const Nav = styled.nav`
     background-color: #313a46;
     height: 100vh;
-    width: 280px;
+    width: 260px;
     /* transition: .3s all; */
     padding-top: 20px;
-    box-shadow: inset -20px 5px 20px rgba(0,0,0,.1);
+    box-shadow: inset -10px 5px 20px rgba(0,0,0,.2);
 
     * {
         transition: .3s all;
@@ -37,25 +37,56 @@ const Nav = styled.nav`
     ul {
         margin-top: 30px;
         list-style: none;
-        font-size: 16px;
+        font-size: 17px;
         padding: 0px;
 
         li {
-            padding: 12px 0px;
+            padding: 8px 14px;
+            border-radius: 5px;
+            margin-top: 6px;
             cursor: pointer;
+            transform: .3s all;
             
             .icon {
                 margin-top: -5px;
                 margin-right: 12px;
             }
+
+            svg {
+                transition: .02s all !important;
+            }
         }
 
         li:hover {
-            filter: brightness(1.5);
+            svg {
+                color: rgb(220, 220, 220) !important;
+            }
+            span {
+                color: rgb(220, 220, 220) !important;
+            }
+            background-color: #303943;
+            box-shadow: inset 0px 0px 10px rgba(0,0,0,.1);
         }
 
-        .teste {
-            background-color: #232931;
+        .active {
+            background-color: #29313a;
+            box-shadow: inset 0px 0px 10px rgba(0,0,0,.1);
+            svg {
+                color: white !important;
+            }
+            span {
+                color: white !important;
+            }
+        }
+        .active:hover {
+            background-color: #29313a;
+            box-shadow: inset 0px 0px 10px rgba(0,0,0,.1);
+            svg {
+                color: white !important;
+            }
+            span {
+                color: white !important;
+            }
         }
 
     }
@@ -69,15 +100,9 @@ const Nav = styled.nav`
 
 
     .div_menu {
-        margin: 24px 20px;
+        margin: 24px 16px;
 
     }
-
-
-    .active {
-        color: white;
-    }
-
 
 
     @media screen and (max-width: 1200px) {
@@ -119,6 +144,7 @@ const Nav = styled.nav`
 `;
 
 export function SideBar() {
+
     return (
         <Nav>
             <div>
@@ -131,15 +157,22 @@ export function SideBar() {
             <div className="div_menu" >
                 <ul className="">
 
-                    <li className="">
-                        <Link data-bs-toggle="" to="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
-                            <NavIcon style={{ fontSize: '18px' }} className="active icon" icon="uil:home-alt" />
-                            <span className="active nav_text"> Dashboards </span>
-                        </Link>
-                    </li>
+                    <Link data-bs-toggle="" to="/" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
+                        <li className="active">
+                            <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:home-alt" />
+                            <span className=" nav_text"> Resumo </span>
+                        </li>
+                    </Link>
 
-                    <li className="">
-                        <Link to="apps-calendar.html" className="">
+                    <Link to="/ativos" className="">
+                        <li className="">
+                            <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:graph-bar" />
+                            <span className='nav_text'> Ativos </span>
+                        </li>
+                    </Link>
+
+                    <Link to="apps-calendar.html" className="">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:calender" />
                             <span className='nav_text'> Calendar </span>
                         </li>
