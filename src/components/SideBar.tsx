@@ -94,7 +94,7 @@ const Nav = styled.nav`
 
     a {
         text-decoration: none;
-        color: #8e8e8e;
+        color: #9a9a9a;
         cursor: pointer;
     }
 
