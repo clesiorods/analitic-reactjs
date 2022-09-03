@@ -1,11 +1,11 @@
 import { mdiAutorenew, mdiCalendarRange, mdiFilterVariant } from "@mdi/js";
 import Icon from "@mdi/react";
 import { ButtonPrimary } from "../components/ButtonPrimary";
-import { Card } from "../components/Card";
 import { CombInput } from "../components/CombInput";
-import { LineGraphic } from "../components/LineGraphic";
+import { LineGraphic } from "../components/AreaGraphic";
 import { MainFrame } from "../components/MainFrame";
 import { SectionTitle } from "../components/SectionTitle";
+import { CardToggle } from "../components/CardToggle";
 
 
 export function Home() {
@@ -34,51 +34,49 @@ export function Home() {
                 <div className="col-md-5">
                     <div className="row">
                         <div className="col">
-                            <Card height={1}>
+                            <CardToggle height={1}>
                                 <div className="card-body">
                                     Customers
                                 </div>
-                            </Card>
+                            </CardToggle>
                         </div>
                         <div className="col">
-                            <Card height={1}>
+                            <CardToggle height={1}>
                                 <div className="card-body">
                                     Revenue
                                 </div>
-                            </Card>
+                            </CardToggle>
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col">
-                            <Card height={1}>
+                            <CardToggle height={1}>
                                 <div className="card-body">
                                     Orders
                                 </div>
-                            </Card>
+                            </CardToggle>
                         </div>
                         <div className="col">
-                            <Card height={1}>
+                            <CardToggle height={1}>
                                 <div className="card-body">
                                     Growth
                                 </div>
-                            </Card>
+                            </CardToggle>
                         </div>
                     </div>
                 </div>
 
                 <div className="col-md-7">
                     <div className="col">
-                        <Card height={2}>
+                        <CardToggle height={2}>
                             <div className="card-body">
-                                <span>
-                                    PROJECTIONS VS ACTUALS
-                                </span>
-                                <div id="chart">
-                                <LineGraphic />
+                                PROJECTIONS VS ACTUALS
+                                <div className="div_chart">
+                                    <LineGraphic />
                                 </div>
                             </div>
-                        </Card>
+                        </CardToggle>
                     </div>
                 </div>
 
@@ -101,38 +99,43 @@ export function Home() {
 
             <div className="row">
                 <div className="col-md-8">
-                    <Card height={2}>
+                    <CardToggle height={2}>
                         <div className="card-body">
-                            <div id="chart_tipo_rendimento"></div>
+                            <div className="card-body">
+                                PROJECTIONS VS ACTUALS
+                                <div className="div_chart">
+                                    <LineGraphic />
+                                </div>
+                            </div>
                         </div>
-                    </Card>
+                    </CardToggle>
                 </div>
                 <div className="col-md-4">
-                    <Card height={2}>
+                    <CardToggle height={2}>
                         <div className="card-body"></div>
-                    </Card>
+                    </CardToggle>
                 </div>
             </div>
 
 
             <div className="row">
                 <div className="col-md-6">
-                    <Card height={2}>
+                    <CardToggle height={2}>
                         <div className="card-body"></div>
-                    </Card>
+                    </CardToggle>
                 </div>
                 <div className="col-md-3">
-                    <Card height={2}>
+                    <CardToggle height={2}>
                         <div className="card-body">
                             TOTAL SALES
                             <div id="chart_proporcao"></div>
                         </div>
-                    </Card>
+                    </CardToggle>
                 </div>
                 <div className="col-md-3">
-                    <Card height={2}>
+                    <CardToggle height={2}>
                         <div className="card-body"></div>
-                    </Card>
+                    </CardToggle>
                 </div>
             </div>
 

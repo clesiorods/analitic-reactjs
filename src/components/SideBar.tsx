@@ -41,10 +41,8 @@ const Nav = styled.nav`
         padding: 0px;
 
         li {
-            padding: 10px 12px;
+            padding: 12px 0px;
             cursor: pointer;
-            border-radius: 5px;
-            margin-top: 4px;
             
             .icon {
                 margin-top: -5px;
@@ -66,6 +64,7 @@ const Nav = styled.nav`
     a {
         text-decoration: none;
         color: #6c757d;
+        cursor: pointer;
     }
 
 
@@ -102,7 +101,7 @@ const Nav = styled.nav`
 
         .icon {
             margin: 5px 0px !important;
-            font-size: 20px !important;
+            font-size: 24px !important;
         }
 
 
@@ -132,7 +131,7 @@ export function SideBar() {
             <div className="div_menu" >
                 <ul className="">
 
-                    <li className="teste">
+                    <li className="">
                         <Link data-bs-toggle="" to="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
                             <NavIcon style={{ fontSize: '18px' }} className="active icon" icon="uil:home-alt" />
                             <span className="active nav_text"> Dashboards </span>
@@ -143,50 +142,50 @@ export function SideBar() {
                         <Link to="apps-calendar.html" className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:calender" />
                             <span className='nav_text'> Calendar </span>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
 
-                    <li className="">
-                        <Link to="apps-chat.html" className="">
+                    <Link to="apps-chat.html" className="">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:comments-alt" />
                             <span className='nav_text'> Chat </span>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
 
-                    <li className="">
-                        <Link data-bs-toggle="" to="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" className="">
+                    <Link data-bs-toggle="" to="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" className="">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:tachometer-fast" />
                             <span className='nav_text'> CRM </span>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
 
-                    <li className="">
-                        <Link data-bs-toggle="" to="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" className="">
+                    <Link data-bs-toggle="" to="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" className="">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:store" />
                             <span className='nav_text'> Ecommerce </span>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
 
-                    <li className="">
-                        <Link data-bs-toggle="" to="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" className="">
+                    <Link data-bs-toggle="" to="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" className="">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:clipboard-alt" />
                             <span className='nav_text'> Tables </span>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
 
-                    <li className="">
-                        <Link data-bs-toggle="" to="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" className="">
+                    <Link data-bs-toggle="" to="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" className="">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:location-point" />
                             <span className='nav_text'> Maps </span>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
 
-                    <li className="">
-                        <Link data-bs-toggle="" to="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" className="">
+                    <Link data-bs-toggle="" to="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" className="">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil-folder-plus" />
                             <span className='nav_text'> Multi Level </span>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
                 </ul>
             </div>
 
