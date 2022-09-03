@@ -6,9 +6,10 @@ import styled from "styled-components";
 const Nav = styled.nav`
     background-color: #313a46;
     height: 100vh;
-    width: 250px;
+    width: 280px;
     /* transition: .3s all; */
     padding-top: 20px;
+    box-shadow: inset -20px 5px 20px rgba(0,0,0,.1);
 
     * {
         transition: .3s all;
@@ -34,13 +35,16 @@ const Nav = styled.nav`
     
 
     ul {
+        margin-top: 30px;
         list-style: none;
         font-size: 16px;
         padding: 0px;
 
         li {
-            padding: 12px 0px;
+            padding: 10px 12px;
             cursor: pointer;
+            border-radius: 5px;
+            margin-top: 4px;
             
             .icon {
                 margin-top: -5px;
@@ -50,6 +54,10 @@ const Nav = styled.nav`
 
         li:hover {
             filter: brightness(1.5);
+        }
+
+        .teste {
+            background-color: #232931;
         }
 
     }
@@ -62,7 +70,7 @@ const Nav = styled.nav`
 
 
     .div_menu {
-        margin: 24px 30px;
+        margin: 24px 20px;
 
     }
 
@@ -94,7 +102,7 @@ const Nav = styled.nav`
 
         .icon {
             margin: 5px 0px !important;
-            font-size: 24px !important;
+            font-size: 20px !important;
         }
 
 
@@ -124,7 +132,7 @@ export function SideBar() {
             <div className="div_menu" >
                 <ul className="">
 
-                    <li className="">
+                    <li className="teste">
                         <Link data-bs-toggle="" to="#sidebarDashboards" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
                             <NavIcon style={{ fontSize: '18px' }} className="active icon" icon="uil:home-alt" />
                             <span className="active nav_text"> Dashboards </span>
