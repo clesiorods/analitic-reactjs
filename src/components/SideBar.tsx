@@ -1,6 +1,6 @@
 import { Icon as NavIcon } from '@iconify/react';
+import { NavLink } from 'react-router-dom';
 
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -69,8 +69,10 @@ const Nav = styled.nav`
         }
 
         .active {
-            background-color: #29313a;
-            box-shadow: inset 0px 0px 10px rgba(0,0,0,.1);
+            li {
+                background-color: #29313a;
+                box-shadow: inset 0px 0px 10px rgba(0,0,0,.1);
+            }
             svg {
                 color: white !important;
             }
@@ -157,68 +159,68 @@ export function SideBar() {
             <div className="div_menu" >
                 <ul className="">
 
-                    <Link data-bs-toggle="" to="/" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
-                        <li className="active">
+                    <NavLink data-bs-toggle="" to="/" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
+                        <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:home-alt" />
                             <span className=" nav_text"> Resumo </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/ativos" className="">
+                    <NavLink to="/ativos" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:graph-bar" />
                             <span className='nav_text'> Ativos </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link to="apps-calendar.html" className="">
+                    <NavLink to="calendar" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:calender" />
                             <span className='nav_text'> Calendar </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link to="apps-chat.html" className="">
+                    <NavLink to="apps-chat.html" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:comments-alt" />
                             <span className='nav_text'> Chat </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link data-bs-toggle="" to="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" className="">
+                    <NavLink data-bs-toggle="" to="/sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:tachometer-fast" />
                             <span className='nav_text'> CRM </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link data-bs-toggle="" to="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" className="">
+                    <NavLink data-bs-toggle="" to="/sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:store" />
                             <span className='nav_text'> Ecommerce </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link data-bs-toggle="" to="#sidebarTables" aria-expanded="false" aria-controls="sidebarTables" className="">
+                    <NavLink data-bs-toggle="" to="/sidebarTables" aria-expanded="false" aria-controls="sidebarTables" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:clipboard-alt" />
                             <span className='nav_text'> Tables </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link data-bs-toggle="" to="#sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" className="">
+                    <NavLink data-bs-toggle="" to="/sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil:location-point" />
                             <span className='nav_text'> Maps </span>
                         </li>
-                    </Link>
+                    </NavLink>
 
-                    <Link data-bs-toggle="" to="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" className="">
+                    <NavLink data-bs-toggle="" to="/sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '18px' }} className=" icon" icon="uil-folder-plus" />
                             <span className='nav_text'> Multi Level </span>
                         </li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
 
