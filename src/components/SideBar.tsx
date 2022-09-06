@@ -43,7 +43,7 @@ const Nav = styled.nav`
         li {
             padding: 8px 14px;
             border-radius: 5px;
-            margin-top: 6px;
+            margin-top: 8px;
             cursor: pointer;
             transform: .3s all;
             
@@ -134,6 +134,12 @@ const Nav = styled.nav`
 
         .nav_text {
             display: none;
+        }
+
+        ul {
+            li {
+                margin-top: 2px;
+            }
         }
     }
 

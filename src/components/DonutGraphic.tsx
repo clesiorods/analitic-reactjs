@@ -8,11 +8,12 @@ export function DonutGraphic() {
     chart: {
       // type: 'donut',
     },
+    fill: { colors: ['#3a7cd1', '#b876e4', '#2efce1', '#70bf60'] },
     labels: [
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Ações & BDRs </span>', 
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Fundos Imobiliários </span>', 
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Renda Fixa </span>', 
-      '<span style="margin-top: -15px; width: 300px; white-space: nowrap !important;" >Fundos de Investimento </span>'
+      'Ações & BDRs>', 
+      'Fundos Imobiliários>', 
+      'Renda Fixa>', 
+      'Fundos de Investimento>'
     ],
     responsive: [{
       breakpoint: 480,
@@ -37,7 +38,7 @@ export function DonutGraphic() {
       position: 'right',
       horizontalAlign: 'left',
       floating: false,
-      fontSize: '14px',
+      fontSize: '16px',
       fontFamily: 'Nunito, sans-serif',
       fontWeight: 400,
       formatter: undefined,
@@ -86,7 +87,7 @@ export function DonutGraphic() {
       options={options}
       series={series}
       type="pie"
-      height={'200px'}
+      height={'300px'}
     // width={'100%'}
     />
 
