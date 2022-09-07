@@ -12,7 +12,7 @@ const Nav = styled.nav`
     box-shadow: inset -10px 5px 20px rgba(0,0,0,.2);
 
     * {
-        transition: .3s all;
+        transition: .2s all;
     }
 
     h1 {
@@ -53,7 +53,7 @@ const Nav = styled.nav`
             }
 
             svg {
-                transition: .02s all !important;
+                transition: .01s all !important;
             }
         }
 

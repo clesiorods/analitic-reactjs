@@ -10,10 +10,10 @@ export function DonutGraphic() {
     },
     fill: { colors: ['#3a7cd1', '#b876e4', '#2efce1', '#70bf60'] },
     labels: [
-      'Ações & BDRs>', 
-      'Fundos Imobiliários>', 
-      'Renda Fixa>', 
-      'Fundos de Investimento>'
+      'Ações & BDRs', 
+      'Fundos Imobiliários', 
+      'Renda Fixa', 
+      'Fundos de Investimento'
     ],
     responsive: [{
       breakpoint: 480,
@@ -51,7 +51,7 @@ export function DonutGraphic() {
       offsetY: 0,
       labels: {
         colors: undefined,
-        useSeriesColors: false
+        useSeriesColors: true
       },
       markers: {
         width: 8,
