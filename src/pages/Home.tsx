@@ -2,10 +2,10 @@ import { mdiAutorenew, mdiCalendarRange, mdiFilterVariant } from "@mdi/js";
 import Icon from "@mdi/react";
 import { ButtonPrimary } from "../components/ButtonPrimary";
 import { CombInput } from "../components/CombInput";
-import { LineGraphic } from "../components/AreaGraphic";
 import { MainFrame } from "../components/MainFrame";
 import { SectionTitle } from "../components/SectionTitle";
 import { CardToggle } from "../components/CardToggle";
+import AreaGraphic from "../components/AreaGraphic";
 
 
 export function Home() {
@@ -73,7 +73,7 @@ export function Home() {
                             <div className="card-body">
                                 PROJECTIONS VS ACTUALS
                                 <div className="div_chart">
-                                    <LineGraphic />
+                                    <AreaGraphic />
                                 </div>
                             </div>
                         </CardToggle>
@@ -104,7 +104,7 @@ export function Home() {
                             <div className="card-body">
                                 PROJECTIONS VS ACTUALS
                                 <div className="div_chart">
-                                    <LineGraphic />
+                                    <AreaGraphic />
                                 </div>
                             </div>
                         </div>
