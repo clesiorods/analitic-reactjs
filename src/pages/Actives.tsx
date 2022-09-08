@@ -8,6 +8,7 @@ import { CombInput } from "../components/CombInput";
 import { DonutGraphic } from "../components/DonutGraphic";
 import { MainFrame } from "../components/MainFrame";
 import { SectionTitle } from "../components/SectionTitle";
+import TabelaSample from "../components/TabelaSample";
 
 const Table = styled.table`
     tbody {
@@ -79,6 +80,10 @@ export function Actives() {
                             <h4>
                                 Ativos
                             </h4>
+
+                            <div>
+                                <TabelaSample></TabelaSample>
+                            </div>
 
                             <div className="table-responsive">
                                 <Table className="table table-centered table-nowrap table-hover mb-0">
